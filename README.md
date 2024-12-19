@@ -19,7 +19,7 @@ Untuk memulai proyek ini secara lokal:
 ### 1. Clone repositori
 ```bash
 git clone https://github.com/adityadwi21/TanyaAi.git
-cd chatbot-ai
+cd TanyaAi
 ```
 
 ### 2. Instal dependensi
