@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tanya AI (Ditenagai oleh Gemini AI)
 
-## Getting Started
+Aplikasi chatbot sederhana dan responsif yang memanfaatkan Gemini AI untuk menghasilkan respons terhadap pertanyaan pengguna dalam bahasa Indonesia. Aplikasi ini memungkinkan pengguna untuk berinteraksi dengan model AI, mengelola token, dan menangani peringatan konten tidak pantas. Dibangun dengan React dan terintegrasi dengan model Gemini Generative AI dari Google.
 
-First, run the development server:
+## Fitur
+
+- **Antarmuka Chat:** Jendela chat yang mudah digunakan untuk berinteraksi dengan AI.
+- **Manajemen Token:** Melacak token dan mengelola penggunaannya (token berkurang setiap interaksi).
+- **Deteksi Konten Tidak Pantas:** Secara otomatis mendeteksi dan memberi peringatan kepada pengguna tentang bahasa yang tidak pantas.
+- **Penyimpanan Lokal:** Menyimpan riwayat chat, jumlah token, dan peringatan secara lokal di browser.
+- **Clear Chat:** Opsi untuk menghapus riwayat percakapan, jumlah token, dan peringatan.
+- **Modal Peringatan Token Habis:** Memberitahu pengguna ketika token habis.
+- **Ditenagai oleh Gemini AI:** Menggunakan model Gemini-1.5-Flash untuk menghasilkan respons.
+
+## Instalasi
+
+Untuk memulai proyek ini secara lokal:
+
+### 1. Clone repositori
+```bash
+git clone https://github.com/adityadwi21/TanyaAi.git
+cd chatbot-ai
+```
+
+### 2. Instal dependensi
+Pastikan Anda telah menginstal Node.js di mesin Anda. Kemudian, instal paket yang diperlukan:
+
+```bash
+npm install
+```
+
+### 3. Atur variabel lingkungan
+Anda perlu mengatur kunci API Google untuk berinteraksi dengan model Gemini AI.
+
+Buat file `.env` di root proyek dan tambahkan baris berikut:
+
+```
+GOOGLE_API_KEY=kunci-api-google-anda
+```
+
+### 4. Jalankan aplikasi
+Mulai server pengembangan:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Aplikasi akan tersedia di `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Cara Kerja
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Interaksi Pengguna:** Pengguna mengetikkan prompt dan mengirimkannya melalui antarmuka chat.
+2. **API Backend:** Frontend mengirimkan permintaan POST ke endpoint `/api/generateResponse` dengan prompt dari pengguna.
+3. **Gemini AI:** Server memanggil model Gemini AI menggunakan kunci API yang diberikan dan mengirimkan respons yang dihasilkan oleh AI.
+4. **Penanganan Respons:** Respons ditampilkan di antarmuka chat, dan token dikurangi sesuai dengan interaksi.
+5. **Sistem Peringatan:** Jika kata-kata tidak pantas terdeteksi dalam prompt, pesan peringatan akan ditampilkan.
 
-## Learn More
+## Dependensi
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `react` dan `react-dom` untuk membangun UI
+- `marked` untuk merender teks markdown
+- `@google/generative-ai` untuk menghubungkan ke Gemini AI
+- `react-icons` untuk ikon (misalnya, ikon peringatan)
