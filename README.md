@@ -61,3 +61,4 @@ Aplikasi akan tersedia di `http://localhost:3000`.
 - `marked` untuk merender teks markdown
 - `@google/generative-ai` untuk menghubungkan ke Gemini AI
 - `react-icons` untuk ikon (misalnya, ikon peringatan)
+- `tailwind` untuk CSS
