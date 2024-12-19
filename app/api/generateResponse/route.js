@@ -1,7 +1,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export async function POST(req) {
-  // Mendapatkan body dari request
+  
   const { prompt } = await req.json();
 
   if (!prompt) {
@@ -11,16 +11,12 @@ export async function POST(req) {
   }
 
   try {
-    // Inisialisasi Google Generative AI dengan API Key Anda
     const genAI = new GoogleGenerativeAI("YOUR_API_KEY");
 
-    // Menggunakan model Gemini-1.5-flash
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-    // Menghasilkan konten berdasarkan prompt
     const result = await model.generateContent(prompt);
 
-    // Mengembalikan respons sebagai JSON
     return new Response(JSON.stringify({ response: result.response.text() }), {
       status: 200,
       headers: { "Content-Type": "application/json" },
