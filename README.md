@@ -1,4 +1,4 @@
-# Tanya AI (Ditenagai oleh Gemini AI)
+# Tanya AI (Powered by Gemini AI)
 
 Aplikasi chatbot sederhana dan responsif yang memanfaatkan Gemini AI untuk menghasilkan respons terhadap pertanyaan pengguna dalam bahasa Indonesia. Aplikasi ini memungkinkan pengguna untuk berinteraksi dengan model AI, mengelola token, dan menangani peringatan konten tidak pantas. Dibangun dengan React dan terintegrasi dengan model Gemini Generative AI dari Google.
 
