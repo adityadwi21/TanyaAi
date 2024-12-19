@@ -12,7 +12,7 @@ export async function POST(req) {
 
   try {
     // Inisialisasi Google Generative AI dengan API Key Anda
-    const genAI = new GoogleGenerativeAI("AIzaSyCKcQ7D1FEM6lQOwwUB4JLPfGQuvWleNPE");
+    const genAI = new GoogleGenerativeAI("YOUR_API_KEY");
 
     // Menggunakan model Gemini-1.5-flash
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
