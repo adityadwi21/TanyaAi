@@ -3,6 +3,9 @@
 Aplikasi chatbot sederhana dan responsif yang memanfaatkan Gemini AI untuk menghasilkan respons terhadap pertanyaan pengguna dalam bahasa Indonesia. Aplikasi ini memungkinkan pengguna untuk berinteraksi dengan model AI, mengelola token, dan menangani peringatan konten tidak pantas. Dibangun dengan React dan terintegrasi dengan model Gemini Generative AI dari Google.
 
 ## Fitur
+Untuk demo dapat dilihat sini: https://tanya-ai-sable.vercel.app/
+
+## Fitur
 
 - **Antarmuka Chat:** Jendela chat yang mudah digunakan untuk berinteraksi dengan AI.
 - **Manajemen Token:** Melacak token dan mengelola penggunaannya (token berkurang setiap interaksi).
