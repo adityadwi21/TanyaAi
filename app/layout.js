@@ -12,12 +12,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Tanya AI"
+  title: "Tanya AI",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="1dfddf1c-8a20-438e-ac36-8aa6e6070c46"
+        ></script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
